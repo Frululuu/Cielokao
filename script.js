@@ -7,6 +7,7 @@ const cerrar = document.getElementById("cerrar");
 const contador = document.getElementById("contador");
 let descubiertas = 0;
 const totalEstrellas = 15;
+const estrellasDecorativas = 235;
 
 const mensajes = [
 
@@ -40,6 +41,34 @@ const mensajes = [
 
 ];
 
+// Estrellas decorativas: solo de fondo, no tienen mensaje ni cuentan
+for(let i=0;i<estrellasDecorativas;i++){
+
+    const estrella=document.createElement("div");
+
+    estrella.classList.add("star");
+
+    estrella.style.left=Math.random()*100+"%";
+
+    estrella.style.top=Math.random()*100+"%";
+
+    const tamaño=Math.random()*3+1;
+
+    estrella.style.width=tamaño+"px";
+
+    estrella.style.height=tamaño+"px";
+
+    estrella.style.animationDelay=Math.random()*5+"s";
+
+    estrella.style.cursor="default";
+
+    estrella.style.pointerEvents="none";
+
+    cielo.appendChild(estrella);
+
+}
+
+// Estrellas con mensaje: clickeables y cuentan para el contador
 const indiceSecreta = Math.floor(Math.random() * totalEstrellas);
 
 for(let i=0;i<totalEstrellas;i++){
