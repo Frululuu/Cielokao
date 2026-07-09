@@ -4,6 +4,10 @@ const popup = document.getElementById("popup");
 const mensaje = document.getElementById("mensaje");
 const cerrar = document.getElementById("cerrar");
 
+const contador = document.getElementById("contador");
+let descubiertas = 0;
+const totalEstrellas = 15;
+
 const mensajes = [
 
     "Cada vez que hablo contigo es calma para mi alma",
@@ -20,7 +24,9 @@ const mensajes = [
 
 ];
 
-for(let i=0;i<250;i++){
+const indiceSecreta = Math.floor(Math.random() * totalEstrellas);
+
+for(let i=0;i<totalEstrellas;i++){
 
     const estrella=document.createElement("div");
 
@@ -41,6 +47,13 @@ for(let i=0;i<250;i++){
     estrella.dataset.mensaje =
          mensajes[i % mensajes.length];
 
+    estrella.dataset.descubierta = "false";
+
+    if (i === indiceSecreta) {
+        estrella.classList.add("secreta");
+        estrella.dataset.mensaje = "Este es tu mensaje especial, único 💫";
+    }
+
     estrella.addEventListener("click",()=>{
 
         const texto = estrella.dataset.mensaje;
@@ -56,6 +69,12 @@ for(let i=0;i<250;i++){
         0 0 10px gold,
         0 0 25px gold
         `;
+
+        if(estrella.dataset.descubierta === "false"){
+            estrella.dataset.descubierta = "true";
+            descubiertas++;
+            contador.textContent = `Estrellas descubiertas: ${descubiertas}/${totalEstrellas}`;
+        }
 
     });
 
@@ -108,11 +127,3 @@ btnMusica.addEventListener("click", () => {
     sonando = !sonando;
 
 });
-
-const indiceSecreta = Math.floor(Math.random() * 250);
-
-// dentro del for, después de crear "estrella":
-if (i === indiceSecreta) {
-    estrella.classList.add("secreta");
-    estrella.dataset.mensaje = "Este es tu mensaje especial, único 💫";
-}
