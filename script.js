@@ -20,7 +20,23 @@ const mensajes = [
 
     "Cada conversación contigo es un tesoro para mi",
 
-    "Ojalá este sea el comienzo de muchos momentos y recuerdos:3"
+    "Ojalá este sea el comienzo de muchos momentos y recuerdos:3",
+
+    "Tu voz tiene un efecto en mi que no se explicar",
+
+    "Me encanta cuando me hablas sobre las cosas que te apasionan",
+
+    "Clawdeen tiene tus mismos colmillos",
+
+    "Cada planta que veo, te veo a ti",
+
+    "Para cada problema que tengas, ya no lo enfrentaras sola",
+
+    "Cada vez que estoy contigo me siento vivo",
+
+    "Cada segundo del dia estoy pensando en ti",
+
+    "Tus ojos son universos que llevan al mundo mas lindo, tu alma"
 
 ];
 
