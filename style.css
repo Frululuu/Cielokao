@@ -355,3 +355,61 @@ p{
     box-shadow:0 0 15px rgba(255,255,255,.3);
 
 }
+
+/* ===== Responsive: celulares y pantallas pequeñas ===== */
+@media (max-width: 600px){
+
+    h1{
+        font-size:32px;
+    }
+
+    p{
+        font-size:16px;
+        max-width:90%;
+    }
+
+    #sky{
+        padding:20px;
+    }
+
+    #moon{
+        width:60px;
+        height:60px;
+        top:20px;
+        right:20px;
+    }
+
+    #moon::after{
+        font-size:18px;
+    }
+
+    #btn-musica{
+        width:42px;
+        height:42px;
+        font-size:18px;
+        top:15px;
+        left:15px;
+    }
+
+    #contador{
+        top:15px;
+        right:15px;
+        font-size:12px;
+        padding:8px 12px;
+    }
+
+    #popup-contenido{
+        width:85%;
+        padding:20px;
+    }
+
+    #mensaje{
+        font-size:15px;
+    }
+
+    .star{
+        min-width:6px;
+        min-height:6px;
+    }
+
+}
